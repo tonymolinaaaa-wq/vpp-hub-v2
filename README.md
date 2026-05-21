@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Valley Painting Pros — Hub
 
-## Getting Started
+Marketing site for Valley Painting Pros, residential painters serving the East Valley of Arizona (Queen Creek, Chandler, Gilbert, Mesa, Tempe, Scottsdale).
 
-First, run the development server:
+Live preview: TBD (Vercel) · Production domain: `valleypaintingpros.com`
+
+## Project source-of-truth docs
+
+- [`CLAUDE.md`](./CLAUDE.md) — locked brand system (colors, typography, design grammar, voice)
+- [`docs/brand-brief-v2.md`](./docs/brand-brief-v2.md) — strategy, customer segments, offers, KPIs
+- [`docs/design-research.md`](./docs/design-research.md) — 11 design principles
+- [`docs/about-story.md`](./docs/about-story.md) — locked About copy
+- [`docs/VPP_Landing_Page_Skeleton.pdf`](./docs/VPP_Landing_Page_Skeleton.pdf) — 12-section page architecture
+
+If the brand brief and `CLAUDE.md` disagree on a visual, **`CLAUDE.md` wins on visuals**, the brief wins on strategy.
+
+## Tech
+
+- Next.js 16 (App Router) + React 19 + TypeScript
+- Tailwind CSS v4 (CSS-first config in `src/app/globals.css`)
+- Turbopack for dev + build
+- Fonts: Montserrat Black (display) + Source Sans 3 (body) via `next/font/google`
+- Deployed on Vercel
+
+## Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Edit copy in `src/lib/siteConfig.ts` — that's the single source of truth for phone, email, hours, license, services, service area, and the 5-piece VPP Promise. Every component pulls from there.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deploy
 
-## Learn More
+Pushes to `main` auto-deploy via Vercel.
 
-To learn more about Next.js, take a look at the following resources:
+## Brand assets
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `public/logos/` — SVG logos (icon, mono, stacked lockup, horizontal lockup)
+- `public/photos/` — production photography
+- `docs/brand-archive/` — original brand iterations (raster + raw vectorizer SVG uploads)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Proprietary. AZ ROC #363664.

@@ -70,28 +70,33 @@ export const siteConfig = {
   promise: [
     {
       n: "01",
-      name: "$300/Day Finish Promise",
-      body: "Every contract carries a written completion deadline. If we miss it, $300/day credit to you until we're done.",
+      headline: "Late? You get $300 a day. Until we're done.",
+      label: "The $300/Day Finish Promise",
+      body: "Every VPP contract carries a written completion deadline. If we miss it, $300/day credit to you until the work is finished. The deadline is a not-later-than date — finishing early is the normal outcome.",
     },
     {
       n: "02",
-      name: "HOA Champion Service",
-      body: "We handle the entire HOA Architectural Review submittal and approval. Free. One free resubmission included.",
+      headline: "Your HOA paperwork? We handle it. Free.",
+      label: "The HOA Champion Service",
+      body: "We submit the entire architectural-review package on your behalf and shepherd it through approval. One free resubmission if the first proposal is denied. You don't touch a form.",
     },
     {
       n: "03",
-      name: "Daily Photo Updates",
-      body: "Four milestone SMS photos every working day: morning setup, prep complete, paint in progress, clean job site at end of day.",
+      headline: "Four photo updates. Every working day. By text.",
+      label: "Daily Photo Updates",
+      body: "Morning arrival and setup. Mid-morning prep complete. Afternoon paint in progress. End-of-day stop point and clean site. You'll know what's happening without leaving work.",
     },
     {
       n: "04",
-      name: "Lifetime Touch-Up Kit",
-      body: "At job completion: a sealed kit with one quart of each color used, a brush, and a log of which color went where.",
+      headline: "Sealed touch-up kit. Labeled wall by wall. For life.",
+      label: "The Lifetime Touch-Up Kit",
+      body: "At job completion we leave you a quart of each color used, a brush, and a written log of which color went where. Re-order is free as long as you own the home.",
     },
     {
       n: "05",
-      name: "12-Month Wellness Check",
-      body: "One year out, we return for a free 30-minute walkthrough. Workmanship issues get touched up free.",
+      headline: "One year later, we come back. Free walkthrough.",
+      label: "The 12-Month Wellness Check",
+      body: "Exactly twelve months after the job, we return for a 30-minute walkthrough. Any workmanship issues we find — touched up free. The work isn't finished until you're still happy a year later.",
     },
   ],
 } as const;

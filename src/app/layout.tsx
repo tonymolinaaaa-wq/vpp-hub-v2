@@ -4,6 +4,7 @@ import "./globals.css";
 import { siteConfig } from "@/lib/siteConfig";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -35,10 +36,11 @@ export default function RootLayout({
       lang="en"
       className={`${montserrat.variable} ${sourceSans.variable} h-full`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col pb-14 md:pb-0">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <MobileStickyCTA />
       </body>
     </html>
   );

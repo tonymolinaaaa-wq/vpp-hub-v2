@@ -30,17 +30,11 @@ export function Logo({ variant = "header", className = "" }: LogoProps) {
         priority={!isFooter}
       />
       <div className="flex flex-col leading-none">
-        <span
-          className={`font-display font-black uppercase tracking-tight text-base md:text-lg ${wordmarkColor}`}
-        >
-          Valley
+        <span className="font-display font-black uppercase tracking-tight text-base md:text-lg whitespace-nowrap">
+          <span className={wordmarkColor}>Valley</span>
+          <span className="text-terracotta ml-2">Painting Pros</span>
         </span>
-        <span
-          className={`font-display font-black uppercase tracking-tight text-xs md:text-sm text-terracotta -mt-0.5`}
-        >
-          Painting Pros
-        </span>
-        <span className={`h-0.5 w-12 ${ruleColor} mt-1`} aria-hidden />
+        <span className={`h-0.5 w-12 ${ruleColor} mt-1.5`} aria-hidden />
       </div>
     </a>
   );

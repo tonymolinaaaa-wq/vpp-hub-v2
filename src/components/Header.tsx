@@ -24,7 +24,7 @@ export function Header() {
 
       {/* Main nav bar */}
       <div className="bg-sand/95 backdrop-blur supports-[backdrop-filter]:bg-sand/80 border-b border-slate/15">
-        <div className="mx-auto max-w-7xl px-4 md:px-8 h-16 md:h-20 flex items-center justify-between gap-6">
+        <div className="mx-auto max-w-7xl px-4 md:px-8 h-20 md:h-24 flex items-center justify-between gap-6">
           <Logo variant="header" />
 
           <nav

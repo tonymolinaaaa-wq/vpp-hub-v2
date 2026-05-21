@@ -1,74 +1,118 @@
 /**
  * Why Direct — section 02 of the hub. Sand background.
- * Condensed origin story: 80-100 words pulled from about-story.md.
- * Type-dominant per design-research §06.
+ * Renders the LOCKED about-story.md verbatim with the voice notes applied:
+ *   — Opens by naming the homeowner's fear (not Ricardo's bio)
+ *   — Ricardo's name appears in paragraph 3
+ *   — Three insider quotes get pull-quote treatment (indented,
+ *     italicized, Slate text, Terracotta vertical rule)
+ *   — Closing "Painting. Done right." is styled distinctly with
+ *     the locked Terracotta underline
+ *
+ * Do not edit copy here without updating docs/about-story.md.
  */
 export function WhyDirect() {
   return (
     <section className="bg-sand text-midnight py-20 md:py-28">
-      <div className="mx-auto max-w-7xl px-6 md:px-8 grid md:grid-cols-12 gap-10 md:gap-16 items-center">
-        <div className="md:col-span-7">
-          <p className="font-body text-xs md:text-sm font-semibold uppercase tracking-[0.16em] text-slate">
-            Our story
+      <div className="mx-auto max-w-3xl px-6 md:px-8">
+        <p className="font-body text-xs md:text-sm font-semibold uppercase tracking-[0.16em] text-slate">
+          Our story
+        </p>
+        <h2 className="font-display font-black uppercase tracking-tight text-4xl md:text-5xl lg:text-6xl text-midnight mt-4 leading-[0.95]">
+          From the inside.
+        </h2>
+        <div className="h-1 w-16 bg-terracotta mt-6" aria-hidden />
+
+        <div className="font-body text-base md:text-lg text-midnight mt-10 leading-relaxed space-y-6 max-w-prose">
+          <p>
+            Hiring a painter is harder than it should be. Crews disappear
+            after the deposit clears. Jobs drag past the date that was
+            promised. Prep gets skipped on the parts you can&apos;t see. And the
+            phone stops getting answered the day the final check clears.
           </p>
-          <h2 className="font-display font-black uppercase tracking-tight text-4xl md:text-5xl lg:text-6xl text-midnight mt-4 leading-[0.95]">
-            The painters
-            <br />
-            behind the names
-          </h2>
-          <div className="h-1 w-16 bg-terracotta mt-6" aria-hidden />
 
-          <div className="font-body text-base md:text-lg text-midnight mt-8 leading-relaxed space-y-5 max-w-2xl">
-            <p>
-              For years we painted under the names of bigger companies. Their
-              crew chiefs told us to skip the second coat. To fake the
-              power-washing. To finish jobs without checking back in.
-            </p>
-            <p>
-              We did the opposite — and the homeowners noticed. The companies
-              started calling us their A-team and putting us on their highest-end
-              jobs. They charged premium prices for the work. We were the ones
-              doing it. So we put our own name on the contract.
-            </p>
-            <p className="font-semibold text-midnight">
-              Valley Painting Pros is what happens when the people who do the
-              work also answer for it.
-            </p>
-          </div>
+          <p>We know — because we&apos;ve spent years watching it happen from the inside.</p>
 
-          <a
-            href="/about"
-            className="inline-flex items-center gap-2 mt-8 font-body text-sm font-bold uppercase tracking-[0.08em] text-terracotta hover:text-midnight transition-colors"
-          >
-            Read the full story →
-          </a>
+          <p>
+            My name is Ricardo Parra. I came up as a painter&apos;s apprentice in
+            2017. By 2020 I&apos;d gone independent — picking up subcontract work
+            under the names of bigger painting companies, with a truck, some
+            tools, and a willingness to outwork anybody on the job. I painted
+            under their names, wore their shirts, and saw how those companies
+            ran jobs from the inside — starting with one of the biggest
+            franchised brands in the country, then half a dozen others after
+            that.
+          </p>
+
+          <p>What I saw bothered me.</p>
+
+          <p>
+            Crew chiefs and project managers — the people supposedly setting
+            the standard — would walk up to me at the start of a job and say
+            things like:
+          </p>
+
+          <blockquote className="not-prose pl-6 border-l-4 border-terracotta my-2 space-y-3">
+            <p className="font-body italic text-slate text-base md:text-lg">
+              &ldquo;One coat is fine — don&apos;t worry about a second.&rdquo;
+            </p>
+            <p className="font-body italic text-slate text-base md:text-lg">
+              &ldquo;Power-washing&apos;s just for show. Wet the walls down and start painting.&rdquo;
+            </p>
+            <p className="font-body italic text-slate text-base md:text-lg">
+              &ldquo;Just finish it up and let us know when we can come collect.&rdquo;
+            </p>
+          </blockquote>
+
+          <p>That was the industry I came up in.</p>
+
+          <p>
+            My partner Gereimy and I never ran a job that way. Years before
+            painting, I&apos;d worked for an old transmission shop owner who
+            taught me to do the right thing whether anyone was looking or
+            not — and that line stuck. We did the prep. We power-washed
+            properly. We applied the second coat. We talked to the homeowner
+            like the job mattered, because to us, it did.
+          </p>
+
+          <p>
+            The customers noticed. The companies we worked under started
+            calling us their A-team and putting us on their highest-end jobs.
+            They charged premium prices for our work. We were the ones doing
+            it. Someone else was answering for it. So we put our own name on
+            the contract.
+          </p>
+
+          <p>
+            That&apos;s how Valley Painting Pros got built — to do the work
+            without the parts of the industry that don&apos;t serve the
+            homeowner. Every VPP contract carries a written completion
+            deadline — if we miss it, we credit you $300 a day until we&apos;re
+            done. Every job ends with a 12-month wellness check and a
+            lifetime touch-up kit, because the work isn&apos;t done until
+            you&apos;re still happy with it a year later. Every day we&apos;re at
+            your house, you get photo updates so you know what&apos;s happening
+            while you&apos;re at work.
+          </p>
+
+          <p className="font-semibold text-midnight">
+            Other painters promise integrity in their marketing. We sign it
+            on the contract.
+          </p>
+
+          <p>
+            If you&apos;ve been burned by a painter before — or you&apos;ve heard
+            the right things on a sales call and watched the wrong things
+            show up at your house — that&apos;s exactly why we built this
+            company.
+          </p>
         </div>
 
-        <div className="md:col-span-5">
-          <div className="relative aspect-[4/5] rounded-sm overflow-hidden bg-adobe/20">
-            {/* Founder photo placeholder — replaced when user uploads */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8 text-slate">
-              <p className="font-body text-xs uppercase tracking-[0.12em] mb-2">
-                Founder photo
-              </p>
-              <p className="font-body text-sm leading-relaxed max-w-[12rem]">
-                Ricardo Parra, on a recent job in the East Valley. Drop a photo
-                into <code className="text-xs">public/photos/ricardo.jpg</code>{" "}
-                to replace this placeholder.
-              </p>
-            </div>
-            {/* When ready, uncomment:
-            <Image
-              src="/photos/ricardo.jpg"
-              alt="Ricardo Parra, founder of Valley Painting Pros"
-              fill
-              className="object-cover"
-            />
-            */}
-          </div>
-          <p className="font-body text-xs uppercase tracking-[0.12em] text-slate mt-3">
-            Ricardo Parra · Owner-operator · East Valley
+        {/* Sign-off — the locked tagline treated as the brand close. */}
+        <div className="mt-14">
+          <p className="font-display font-black uppercase text-4xl md:text-5xl text-midnight tracking-tight">
+            Painting. Done right.
           </p>
+          <div className="h-1 w-16 bg-terracotta mt-4" aria-hidden />
         </div>
       </div>
     </section>

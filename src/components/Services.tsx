@@ -17,8 +17,8 @@ const serviceMeta = {
     photoAlt: "Sage green accent wall in a warm living room",
   },
   "exterior-painting": {
-    photo: null, // placeholder until exterior photo arrives
-    photoAlt: "",
+    photo: "/photos/hero-az-desert-home.png",
+    photoAlt: "East Valley Arizona home at dusk with stucco exterior and tile roof",
   },
 } as const;
 

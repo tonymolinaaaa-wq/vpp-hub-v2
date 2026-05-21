@@ -1,5 +1,4 @@
 import { Hero } from "@/components/Hero";
-import { WhyDirect } from "@/components/WhyDirect";
 import { Services } from "@/components/Services";
 import { RecentWork } from "@/components/RecentWork";
 import { Promise } from "@/components/Promise";
@@ -13,7 +12,6 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <WhyDirect />
       <Services />
       <RecentWork />
       <Promise />

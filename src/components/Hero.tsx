@@ -9,17 +9,20 @@ import { siteConfig } from "@/lib/siteConfig";
 export function Hero() {
   return (
     <section className="relative bg-midnight text-sand overflow-hidden">
-      {/* Background photo with Midnight overlay */}
+      {/* Background photo with Midnight overlay biased to the left for text contrast. */}
       <div className="absolute inset-0" aria-hidden>
         <Image
           src="/photos/scottsdale-exterior.png"
           alt=""
           fill
           priority
-          className="object-cover opacity-25"
+          className="object-cover opacity-90"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-midnight via-midnight/85 to-midnight" />
+        {/* Horizontal scrim: heavy Midnight on the left where copy sits, fading right so the photo shows. */}
+        <div className="absolute inset-0 bg-gradient-to-r from-midnight via-midnight/80 to-midnight/30" />
+        {/* Bottom fade so the section ends on Midnight before the next section starts. */}
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-midnight to-transparent" />
       </div>
 
       {/* Content */}

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { siteConfig } from "@/lib/siteConfig";
 
 /**
@@ -16,17 +17,27 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      {/* Page hero — Midnight, sets the tone before the story opens. */}
-      <section className="bg-midnight text-sand py-20 md:py-28">
-        <div className="mx-auto max-w-3xl px-6 md:px-8">
-          <p className="font-body text-xs md:text-sm font-semibold uppercase tracking-[0.16em] text-adobe">
+      {/* Page hero — Sand background, anchored by the stacked brand lockup. */}
+      <section className="bg-sand text-midnight pt-16 md:pt-24 pb-12 md:pb-16 border-b border-slate/15">
+        <div className="mx-auto max-w-3xl px-6 md:px-8 text-center">
+          <div className="flex justify-center">
+            <Image
+              src="/logos/vpp-wordmark-stacked.svg"
+              alt={siteConfig.brand.name}
+              width={420}
+              height={472}
+              className="h-56 md:h-72 w-auto"
+              priority
+            />
+          </div>
+          <p className="font-body text-xs md:text-sm font-semibold uppercase tracking-[0.16em] text-slate mt-10">
             About Valley Painting Pros
           </p>
-          <h1 className="font-display font-black uppercase tracking-tight text-5xl md:text-6xl lg:text-7xl text-sand mt-4 leading-[0.95]">
+          <h1 className="font-display font-black uppercase tracking-tight text-5xl md:text-6xl lg:text-7xl text-midnight mt-4 leading-[0.95]">
             From the inside.
           </h1>
-          <div className="h-1 w-16 bg-terracotta mt-6" aria-hidden />
-          <p className="font-body text-base md:text-lg text-sand/85 mt-8 leading-relaxed">
+          <div className="h-1 w-16 bg-terracotta mt-6 mx-auto" aria-hidden />
+          <p className="font-body text-base md:text-lg text-midnight mt-8 leading-relaxed max-w-2xl mx-auto">
             The full story behind Valley Painting Pros — why we exist, who&apos;s
             doing the work, and what we put in writing.
           </p>
@@ -34,7 +45,7 @@ export default function AboutPage() {
       </section>
 
       {/* The locked story */}
-      <section className="bg-sand text-midnight py-20 md:py-28">
+      <section className="bg-sand text-midnight py-16 md:py-20">
         <article className="mx-auto max-w-3xl px-6 md:px-8 font-body text-base md:text-lg leading-relaxed space-y-6">
           <p>
             Hiring a painter is harder than it should be. Crews disappear

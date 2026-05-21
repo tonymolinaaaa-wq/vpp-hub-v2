@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { siteConfig } from "@/lib/siteConfig";
 
 /**
@@ -7,11 +8,24 @@ import { siteConfig } from "@/lib/siteConfig";
  * to themselves, not a noun describing a feature. Editorial row treatment —
  * numeral, big commitment headline, supporting body, hairline divider between.
  * Closes with a CTA so the moment converts.
+ *
+ * Decorated by an oversized mono icon watermark off to the right at low
+ * opacity — adds visual texture to a type-only section without competing.
  */
 export function Promise() {
   return (
-    <section className="bg-midnight text-sand py-20 md:py-28">
-      <div className="mx-auto max-w-5xl px-6 md:px-8">
+    <section className="relative bg-midnight text-sand py-20 md:py-28 overflow-hidden">
+      {/* Decorative mono icon watermark — sits behind content, off to the right. */}
+      <Image
+        src="/logos/vpp-icon-mono.svg"
+        alt=""
+        aria-hidden="true"
+        width={600}
+        height={696}
+        className="absolute -right-20 top-1/2 -translate-y-1/2 w-[28rem] md:w-[36rem] h-auto opacity-[0.04] invert pointer-events-none select-none"
+      />
+
+      <div className="relative mx-auto max-w-5xl px-6 md:px-8">
         <div className="max-w-3xl">
           <p className="font-body text-xs md:text-sm font-semibold uppercase tracking-[0.16em] text-adobe">
             What we put in writing

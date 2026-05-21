@@ -1,9 +1,10 @@
+import Image from "next/image";
 import { siteConfig } from "@/lib/siteConfig";
 
 /**
  * Final CTA — section 10 of the hub. Midnight full-bleed.
- * Last conversion moment before the footer. Single-purpose, no new info.
- * Quote form coming in task #5; for v1 we anchor on phone + email + write-us.
+ * Anchored by the knockout stacked lockup (Sand wordmark on Midnight).
+ * Last conversion moment before the footer.
  */
 export function FinalCTA() {
   return (
@@ -15,12 +16,18 @@ export function FinalCTA() {
         <p className="font-body text-xs md:text-sm font-semibold uppercase tracking-[0.16em] text-adobe">
           Get your estimate
         </p>
-        <h2 className="font-display font-black uppercase tracking-tight text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-sand mt-4 leading-[0.92]">
-          Painting.
-          <br />
-          Done right.
-        </h2>
-        <div className="h-1 w-16 bg-terracotta mt-8 mx-auto" aria-hidden />
+
+        {/* Brand lockup — knockout variant designed for dark backgrounds. */}
+        <div className="flex justify-center mt-8">
+          <Image
+            src="/logos/vpp-wordmark-stacked-knockout.svg"
+            alt={siteConfig.brand.name}
+            width={420}
+            height={472}
+            className="h-48 md:h-64 w-auto"
+          />
+        </div>
+
         <p className="font-body text-lg md:text-xl text-sand/85 mt-10 leading-relaxed max-w-2xl mx-auto">
           Ricardo personally responds to every inquiry within 24 hours and
           delivers the estimate in person. No callbacks lost, no remote quotes.

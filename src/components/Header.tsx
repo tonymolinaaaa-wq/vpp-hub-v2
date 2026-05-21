@@ -45,16 +45,17 @@ export function Header() {
             </a>
           </nav>
 
-          <div className="flex items-center gap-3 md:gap-5">
+          {/* Phone + CTA — both hidden on mobile (sticky bottom bar handles them). */}
+          <div className="hidden sm:flex items-center gap-3 md:gap-5">
             <a
               href={`tel:${siteConfig.contact.phoneRaw}`}
-              className="hidden sm:inline font-body text-sm font-semibold uppercase tracking-[0.08em] text-midnight hover:text-terracotta transition-colors"
+              className="font-body text-sm font-semibold uppercase tracking-[0.08em] text-midnight hover:text-terracotta transition-colors whitespace-nowrap"
             >
               {siteConfig.contact.phone}
             </a>
             <a
               href="#estimate"
-              className="inline-flex items-center px-4 md:px-5 py-2.5 md:py-3 bg-terracotta text-sand font-body text-xs md:text-sm font-bold uppercase tracking-[0.06em] rounded-sm hover:opacity-90 transition-opacity"
+              className="inline-flex items-center px-4 md:px-5 py-2.5 md:py-3 bg-terracotta text-sand font-body text-xs md:text-sm font-bold uppercase tracking-[0.06em] rounded-sm hover:opacity-90 transition-opacity whitespace-nowrap"
             >
               Free Estimate
             </a>

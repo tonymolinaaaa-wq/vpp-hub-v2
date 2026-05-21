@@ -58,6 +58,28 @@ export function Hero() {
             Or call {siteConfig.contact.phone}
           </a>
         </div>
+
+        {/* Trust badges — Google Guaranteed + BBB A+. Placed below CTAs so they */}
+        {/* support trust at the moment of decision without interrupting conversion. */}
+        <div className="mt-12 pt-8 border-t border-sand/20 flex flex-wrap items-center gap-6 md:gap-8">
+          <p className="font-body text-xs uppercase tracking-[0.16em] text-sand/70 w-full sm:w-auto">
+            Verified by
+          </p>
+          <Image
+            src="/photos/badge-google-guaranteed.webp"
+            alt="Google Guaranteed"
+            width={80}
+            height={80}
+            className="h-16 md:h-20 w-auto"
+          />
+          <Image
+            src="/photos/badge-bbb.png"
+            alt="BBB Accredited Business, A+ Rating"
+            width={80}
+            height={80}
+            className="h-16 md:h-20 w-auto"
+          />
+        </div>
       </div>
     </section>
   );

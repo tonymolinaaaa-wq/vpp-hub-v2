@@ -36,6 +36,7 @@ export const siteConfig = {
     bonded: true,
     insurance: "$1M per occurrence / $2M aggregate general liability via ERGO NEXT",
     bbb: "BBB A+ Accredited",
+    googleGuaranteed: true,
     ownerOperator: "Ricardo Parra on every estimate, every contract, every escalation",
   },
 

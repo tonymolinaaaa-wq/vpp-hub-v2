@@ -12,7 +12,7 @@ export function Hero() {
       {/* Background photo with Midnight overlay */}
       <div className="absolute inset-0" aria-hidden>
         <Image
-          src="/photos/hero-az-desert-home.png"
+          src="/photos/scottsdale-exterior.png"
           alt=""
           fill
           priority

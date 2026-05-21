@@ -1,4 +1,5 @@
 import { Logo } from "./Logo";
+import { FacebookIcon, InstagramIcon, StarIcon } from "./icons";
 import { siteConfig } from "@/lib/siteConfig";
 
 /**
@@ -18,6 +19,42 @@ export function Footer() {
               East Valley, Arizona. Residential repainting and cabinet refinishing,
               direct with the owner. {siteConfig.credentials.ownerOperator}.
             </p>
+            <ul className="flex items-center gap-4 mt-6" aria-label="Social media">
+              <li>
+                <a
+                  href={siteConfig.social.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Valley Painting Pros on Facebook"
+                  className="inline-flex items-center justify-center w-9 h-9 rounded-sm border border-sand/20 text-sand/90 hover:text-terracotta hover:border-terracotta transition-colors"
+                >
+                  <FacebookIcon className="w-4 h-4" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href={siteConfig.social.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Valley Painting Pros on Instagram"
+                  className="inline-flex items-center justify-center w-9 h-9 rounded-sm border border-sand/20 text-sand/90 hover:text-terracotta hover:border-terracotta transition-colors"
+                >
+                  <InstagramIcon className="w-4 h-4" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href={siteConfig.social.googleBusinessProfile}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Read our Google reviews"
+                  className="inline-flex items-center gap-1.5 px-3 h-9 rounded-sm border border-sand/20 text-sand/90 hover:text-terracotta hover:border-terracotta transition-colors font-body text-xs font-semibold uppercase tracking-[0.08em]"
+                >
+                  <StarIcon className="w-3.5 h-3.5" />
+                  Reviews
+                </a>
+              </li>
+            </ul>
           </div>
 
           <div>

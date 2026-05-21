@@ -19,10 +19,15 @@ export const siteConfig = {
     emailOperational: "valleypaintingprosllc@gmail.com",
   },
 
-  // Hours pending — see open inputs in MEMORY. Placeholder for now.
   hours: {
-    weekdays: "Mon–Fri 7am–6pm",
-    weekend: "Sat 8am–2pm · Sun closed",
+    weekdays: "Mon–Fri 8am–5pm",
+    weekend: "Sat–Sun closed",
+  },
+
+  social: {
+    facebook: "https://www.facebook.com/valleyprosaz",
+    instagram: "https://www.instagram.com/valleyprosaz/",
+    googleBusinessProfile: "https://share.google/aJ346E8iYRSr4f2L5",
   },
 
   credentials: {

@@ -1,4 +1,5 @@
 import { siteConfig } from "@/lib/siteConfig";
+import { Brushstroke } from "./Brushstroke";
 
 /**
  * Where We Work — section 08 of the hub. Sand background.
@@ -19,7 +20,7 @@ export function ServiceAreas() {
             <br />
             cities.
           </h2>
-          <div className="h-1 w-16 bg-terracotta mt-6" aria-hidden />
+          <Brushstroke variant="sweep" width={96} className="text-terracotta mt-6" />
           <p className="font-body text-base md:text-lg text-midnight mt-8 leading-relaxed">
             Owner-operator service, same crew every job, across the East
             Valley. Queen Creek is our priority territory — minimal

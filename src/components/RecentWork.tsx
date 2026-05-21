@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Brushstroke } from "./Brushstroke";
 
 /**
  * Recent Work — section 04 of the hub. Sand background.
@@ -40,7 +41,7 @@ export function RecentWork() {
             <br />
             looks like.
           </h2>
-          <div className="h-1 w-16 bg-terracotta mt-6" aria-hidden />
+          <Brushstroke variant="sweep" width={96} className="text-terracotta mt-6" />
           <p className="font-body text-base md:text-lg text-midnight mt-8 leading-relaxed">
             A sample of recent work. Full gallery — including before-and-after
             comparisons — grows as we complete more jobs under the VPP name.

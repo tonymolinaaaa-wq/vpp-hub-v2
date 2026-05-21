@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { siteConfig } from "@/lib/siteConfig";
+import { Brushstroke } from "@/components/Brushstroke";
 
 /**
  * /about — the full locked story from docs/about-story.md, rendered verbatim
@@ -36,7 +37,7 @@ export default function AboutPage() {
           <h1 className="font-display font-black uppercase tracking-tight text-5xl md:text-6xl lg:text-7xl text-midnight mt-4 leading-[0.95]">
             From the inside.
           </h1>
-          <div className="h-1 w-16 bg-terracotta mt-6 mx-auto" aria-hidden />
+          <div className="flex justify-center mt-6 text-terracotta"><Brushstroke variant="double" width={112} /></div>
           <p className="font-body text-base md:text-lg text-midnight mt-8 leading-relaxed max-w-2xl mx-auto">
             The full story behind Valley Painting Pros — why we exist, who&apos;s
             doing the work, and what we put in writing.

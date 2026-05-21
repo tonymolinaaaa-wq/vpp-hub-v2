@@ -1,3 +1,5 @@
+import { Brushstroke } from "./Brushstroke";
+
 /**
  * Questions — section 09 of the hub. Adobe warm-break per CLAUDE.md §05.
  * Six accordion items using semantic <details>/<summary> so it works
@@ -42,7 +44,7 @@ export function FAQ() {
           <h2 className="font-display font-black uppercase tracking-tight text-4xl md:text-5xl lg:text-6xl text-midnight mt-4 leading-[0.95]">
             Before you call.
           </h2>
-          <div className="h-1 w-16 bg-terracotta mt-6" aria-hidden />
+          <Brushstroke variant="double" width={96} className="text-terracotta mt-6" />
         </div>
 
         <ul className="mt-12 space-y-3">

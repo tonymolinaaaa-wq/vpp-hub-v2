@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { siteConfig } from "@/lib/siteConfig";
+import { Brushstroke } from "./Brushstroke";
 
 /**
  * What We Do — section 03 of the hub. Adobe (warm) break per CLAUDE.md §05.
@@ -35,7 +36,7 @@ export function Services() {
             <br />
             All done right.
           </h2>
-          <div className="h-1 w-16 bg-terracotta mt-6" aria-hidden />
+          <Brushstroke variant="tapered" width={96} className="text-terracotta mt-6" />
           <p className="font-body text-base md:text-lg text-midnight mt-8 leading-relaxed">
             We don&apos;t do remodels. We don&apos;t do drywall. We paint —
             cabinets, interiors, exteriors — and we do all three the same way,

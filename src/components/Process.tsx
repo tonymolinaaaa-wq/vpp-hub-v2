@@ -1,3 +1,5 @@
+import { Brushstroke } from "./Brushstroke";
+
 /**
  * How It Works — section 06 of the hub. Sand background.
  * 3-step process per brand brief §07. Numbered steps with descriptions.
@@ -38,7 +40,7 @@ export function Process() {
             <br />
             Three steps.
           </h2>
-          <div className="h-1 w-16 bg-terracotta mt-6" aria-hidden />
+          <Brushstroke variant="tapered" width={96} className="text-terracotta mt-6" />
           <p className="font-body text-base md:text-lg text-midnight mt-8 leading-relaxed">
             No mystery, no waiting on a callback, no surprise pricing.
             Here&apos;s the entire path from first contact to finished job.

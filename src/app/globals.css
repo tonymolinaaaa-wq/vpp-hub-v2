@@ -17,9 +17,18 @@
   --font-body: var(--font-source-sans), system-ui, sans-serif;
 }
 
+/*
+  Sand grain texture — SVG noise applied to the page body. Sand sections show
+  it through (the eye reads as paint-roller material). Midnight and Adobe
+  section backgrounds cover it.
+
+  Encoded inline as a data URI so it ships with the CSS and adds zero requests.
+*/
 html {
-  background: var(--color-sand);
+  background-color: var(--color-sand);
   color: var(--color-midnight);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='280' height='280' viewBox='0 0 280 280'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' seed='4'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.045 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  background-attachment: fixed;
 }
 
 body {
@@ -43,4 +52,42 @@ article a:hover {
 *:focus-visible {
   outline: 2px solid var(--color-electric);
   outline-offset: 2px;
+}
+
+/*
+  Hero page-load reveal. Staggered fade-up — each element rises 16px and
+  fades in over 700ms with a strong ease-out (signals craft without feeling
+  bouncy). Disabled entirely when the user prefers reduced motion.
+*/
+@keyframes vpp-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: vpp-fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.fade-up-100 { animation-delay: 0.1s; }
+.fade-up-200 { animation-delay: 0.2s; }
+.fade-up-300 { animation-delay: 0.3s; }
+.fade-up-400 { animation-delay: 0.4s; }
+.fade-up-500 { animation-delay: 0.5s; }
+.fade-up-600 { animation-delay: 0.6s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-up,
+  .fade-up-100,
+  .fade-up-200,
+  .fade-up-300,
+  .fade-up-400,
+  .fade-up-500,
+  .fade-up-600 {
+    animation: none;
+  }
 }
